@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
     /**
      * Esta actividad te cuenta el numero de palabas que hay en un texto que el usuario introduce a partir de un Scanner
-     * Esta formado por un metodo para contar las palabras
-     * @param args texto es un texto.
+     * Esta formado por un metodo para contar las palabras y un Main
      */
 
     public static void main(String[] args) {
