@@ -11,8 +11,6 @@ public class Ejercicio4 {
     /**
      * Metodo principal que se ejecuta al iniciar el programa.
      * Pide al usuario que introduzca una frase y luego muestra el número de vocales y consonantes de cada palabra.
-     *
-     * @param args Argumentos de la línea de comandos (no se utilizan).
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
