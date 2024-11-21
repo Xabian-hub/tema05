@@ -19,7 +19,12 @@ public class Ejercicio11 {
 
     public static void main(String[] args) {
         final int LONGITUD = 10; // Tamaño del array
-        int[] V = {-1, 30, 20, 1, 5, 100, -5, 7, -100, 1000};
+        int[] V = new int[LONGITUD];
+
+        // Inicializar el array con valores de ejemplo
+        int[] valoresEjemplo = {-1, 30, 20, 1, 5, 100, -5, 7, -100, 1000};
+        System.arraycopy(valoresEjemplo, 0, V, 0, LONGITUD);
+
         System.out.println("Array original (V): " + Arrays.toString(V));
 
         // Generar array P con los elementos de V en orden inverso
