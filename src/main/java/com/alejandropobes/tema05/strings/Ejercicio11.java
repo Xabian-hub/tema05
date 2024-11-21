@@ -9,13 +9,25 @@ public class Ejercicio11 {
 
         // Solicitar las tres cadenas: nombre, primer apellido y segundo apellido
         System.out.print("Ingrese su nombre: ");
-        String nombre = leer.nextLine();
+        String nombre = leer.nextLine().trim();
+        while (nombre.isEmpty()) {
+            System.out.print("Por favor ingrese un nombre válido: ");
+            nombre = leer.nextLine().trim();
+        }
 
         System.out.print("Ingrese su primer apellido: ");
-        String primerApellido = leer.nextLine();
+        String primerApellido = leer.nextLine().trim();
+        while (primerApellido.isEmpty()) {
+            System.out.print("Por favor ingrese un primer apellido válido: ");
+            primerApellido = leer.nextLine().trim();
+        }
 
         System.out.print("Ingrese su segundo apellido: ");
-        String segundoApellido = leer.nextLine();
+        String segundoApellido = leer.nextLine().trim();
+        while (segundoApellido.isEmpty()) {
+            System.out.print("Por favor ingrese un segundo apellido válido: ");
+            segundoApellido = leer.nextLine().trim();
+        }
 
         // Concatenamos las tres cadenas para formar el nombre completo
         String nombreCompleto = nombre + " " + primerApellido + " " + segundoApellido;
@@ -36,7 +48,7 @@ public class Ejercicio11 {
 
         // c) Los 2 últimos caracteres (si la longitud es suficiente)
         System.out.println("c)");
-        if (nombreCompleto.length() >= 2) {
+        if (nombreCompleto.trim().length() >= 2) { // Usamos trim() para eliminar espacios en blanco
             System.out.println("Últimos 2 caracteres: " + nombreCompleto.substring(nombreCompleto.length() - 2));
         } else {
             System.out.println("Cadena demasiado corta.");
@@ -56,7 +68,8 @@ public class Ejercicio11 {
         // e) Reemplazar todas las ocurrencias del primer carácter en mayúscula
         System.out.println("e)");
         char primeraLetra = nombreCompleto.charAt(0);
-        System.out.println("Reemplazar primera letra en mayúscula: " + nombreCompleto.replace(primeraLetra, Character.toUpperCase(primeraLetra)));
+        char primeraLetraMayuscula = Character.toUpperCase(primeraLetra);
+        System.out.println("Reemplazar primera letra en mayúscula: " + nombreCompleto.replace(primeraLetra, primeraLetraMayuscula));
 
         // f) Cadena con tres asteriscos por delante y por detrás
         System.out.println("f)");
@@ -69,4 +82,3 @@ public class Ejercicio11 {
         System.out.println("Invertido: " + sb.reverse());
     }
 }
-
